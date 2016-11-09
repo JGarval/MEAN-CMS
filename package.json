@@ -2,6 +2,7 @@
   "name": "mean-cms",
   "version": "0.0.1",
   "dependencies": {
+    "babel-eslint": "^7.1.0",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",

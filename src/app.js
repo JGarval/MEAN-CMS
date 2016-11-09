@@ -44,6 +44,6 @@ app.use(function(err, req, res, next) {
 });
 
 if (!module.parent) {
-    app.listen(3333);
+  app.listen(3333);
 }
 module.exports = app;
