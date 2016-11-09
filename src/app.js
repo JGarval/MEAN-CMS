@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
+//var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -16,10 +16,10 @@ var stylus = require('stylus');
 // Stylus middleware
 app.use(
   stylus.middleware({
-    src: __dirname + '/stylus',
-    dest: __dirname + '/public/css',
+    src: `${__dirname}/stylus`,
+    dest: `${__dirname}/public/css`,
     compile: function(str, path) {
-        return stylus(str).set('filename', path).set('compress', true);
+      return stylus(str).set('filename', path).set('compress', true);
     }
   })
 );
@@ -28,8 +28,8 @@ app.use(
 app.engine('.hbs', expressHandlebars({
   extname: '.hbs',
   defaultLayout: 'main',
-  layoutsDir: __dirname + '/views/layout',
-  partialsDir: __dirname + '/views/partials',
+  layoutsDir: `${__dirname}/views/layout`,
+  partialsDir: `${__dirname}/views/partials`,
   helpers: handlebarsHelpers
 }));
 

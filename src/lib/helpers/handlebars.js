@@ -1,15 +1,13 @@
-'use strict';
-
 var htmlMinify = require('html-minifier').minify;
 
 module.exports = {
-    minify: minify;
+  minify: minify
 };
 
 function minify(content) {
-    return htmlMinify(content.fn(this), {
-        removeComments: true,
-        collapseWithespace: true,
-        minifyJS: true
-    });
+  return htmlMinify(content.fn(this), {
+    removeComments: true,
+    collapseWithespace: true,
+    minifyJS: true
+  });
 }
