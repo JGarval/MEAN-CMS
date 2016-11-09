@@ -5,7 +5,7 @@ indent_style = space
 indent_size = 5
 end_of_line = lf
 charset = utf-8
-trim_traling_whitespace = true
+trim_trailing_whitespace = true
 insert_final_newline = true
 
 [package.json]
@@ -15,4 +15,4 @@ indent_size = 2
 indent_size = 2
 
 [*.md]
-trim_trainling_whitespace = false
+trim_trailing_whitespace = false
