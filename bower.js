@@ -1,0 +1,10 @@
+{
+     "name" : "meanCMS",
+     "version" : "0.0.1",
+     "author" : "javiergarval"
+     "license" : "MIT",
+     "dependencies" : {
+          "font-awesome" : "*",
+          "normalize-css" : "*"
+     }
+}
