@@ -9,10 +9,11 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-var expresHandlebars = require('express-handlebars');
+var expressHandlebars = require('express-handlebars');
 var handlebarsHelpers = require('./lib/helpers/handlebars');
 var stylus = require('stylus');
 
+// Stylus middleware
 app.use(
   stylus.middleware({
     src: __dirname + '/stylus',
@@ -24,10 +25,17 @@ app.use(
 );
 
 // Handlebars setup
+app.engine('.hbs', expressHandlebars({
+  extname: '.hbs',
+  defaultLayout: 'main',
+  layoutsDir: __dirname + '/views/layout',
+  partialsDir: __dirname + '/views/partials',
+  helpers: handlebarsHelpers
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', '.hbs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
