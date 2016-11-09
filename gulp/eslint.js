@@ -10,5 +10,5 @@ module.exports = function() {
           .pipe(eslint())
           .pipe(eslint.format())
           .pipe(eslint.failAfterError());
-     })
-}
+     });
+};
